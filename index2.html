@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Watts | Web Developer</title>
+    <style>
+        /* BASE STYLES & RESET */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 0 80px 0;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; text-align: center; padding: 60px 0; }
+            .hero-graphic { order: -1; max-width: 280px; margin: 0 auto; }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        h2.subtitle {
+            font-size: 2.0rem;
+            font-weight: 600;
+        }
+        .intro {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 32px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0d9488, #115e59);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4);
+        }
+
+        /* SECTION UTILITIES */
+        .section-break {
+            border: 0;
+            border-top: 1px solid #e2e8f0;
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        /* CARD SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        /* VALUE PROPOSITION WITH GRAPHIC */
+        .value-section {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .value-section { grid-template-columns: 1fr; text-align: center; }
+            .value-graphic { max-width: 240px; margin: 0 auto; }
+        }
+
+        .value-text h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        /* FOOTER CTA */
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            background: #0f172a;
+            color: #94a3b8;
+            margin-top: 100px;
+        }
+        footer h2 {
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+        footer .cta-btn {
+            box-shadow: none;
+        }
+        footer p {
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <div class="container">
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Emily Watts</h1>
+                <h2 class="subtitle">Web development, simplified.</h2>
+                <p class="intro">I build and optimize clean, modern websites for small businesses, taking the technical headaches completely off your plate.</p>
+                <a href="https://www.linkedin.com" target="_blank" class="cta-btn">Message Me on LinkedIn</a>
+            </div>
+            <!-- Dynamic Vector Graphic representing layout structure -->
+            <div class="hero-graphic">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="20" width="180" height="150" rx="12" fill="#E2E8F0"/>
+                    <rect x="10" y="20" width="180" height="35" rx="12" fill="#0D9488"/>
+                    <circle cx="30" cy="37" r="5" fill="#FFFFFF"/>
+                    <circle cx="45" cy="37" r="5" fill="#FFFFFF" opacity="0.6"/>
+                    <circle cx="60" cy="37" r="5" fill="#FFFFFF" opacity="0.3"/>
+                    <rect x="25" y="75" width="90" height="15" rx="4" fill="#0F172A"/>
+                    <rect x="25" y="100" width="110" height="8" rx="4" fill="#94A3B8"/>
+                    <rect x="25" y="115" width="70" height="8" rx="4" fill="#94A3B8"/>
+                    <rect x="25" y="135" width="50" height="16" rx="4" fill="#14B8A6"/>
+                    <rect x="130" y="75" width="45" height="75" rx="8" fill="#F1F5F9" stroke="#0D9488" stroke-width="2"/>
+                    <circle cx="152" cy="100" r="12" fill="#0D9488" opacity="0.2"/>
+                    <rect x="142" y="122" width="20" height="4" rx="2" fill="#0D9488"/>
+                    <rect x="138" y="132" width="28" height="4" rx="2" fill="#94A3B8"/>
+                </svg>
+            </div>
+        </header>
+
+        <hr class="section-break">
+
+        <!-- SERVICES SECTION -->
+        <section>
+            <h2 class="section-title">What I Help With</h2>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="#0D9488" fill-opacity="0.1"/>
+                            <path d="M19 3H5C3.89543 3 3 3.89543 3 4.99999V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V4.99999C21 3.89543 20.1046 3 19 3Z" stroke="#0D9488" stroke-width="2"/>
+                            <path d="M3 8H21" stroke="#0D9488" stroke-width="2"/>
+                            <path d="M7 5.5H7.01" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 5.5H10.01" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M11 13L14 10L17 13" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 10V16" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>High-converting promotional pages designed custom to turn casual traffic into business leads.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="#0D9488" fill-opacity="0.1"/>
+                            <path d="M12 4V20M20 12H4" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Website Updates</h3>
+                    <p>Swift structural alterations, visual modifications, troubleshooting, and fresh copy tweaks on your active platform.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="#0D9488" fill-opacity="0.1"/>
+                            <path d="M7 16V18C7 19.1046 7.89543 20 9 20H19C20.1046 20 21 19.1046 21 18V8C21 6.89543 20.1046 6 19 6H17" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="3" y="4" width="11" height="12" rx="2" stroke="#0D9488" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Mobile Optimization</h3>
+                    <p>Ensuring your current responsive framework is flawless across phone screens and modern responsive breakpoints.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-break">
+
+        <!-- VALUE SECTON (Why Work With Me) -->
+        <section class="value-section">
+            <div class="value-graphic">
+                <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="80" r="70" fill="#F1F5F9"/>
+                    <circle cx="80" cy="80" r="50" fill="#0D9488" fill-opacity="0.1"/>
+                    <path d="M65 80L75 90L95 70" stroke="#0D9488" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="value-text">
+                <h3>Clear, Consistent Execution</h3>
+                <p style="color: #475569; font-size: 1.1rem; margin-bottom: 8px;"><strong>Over 20 years of experience</strong> working with front-end code structures.</p>
+                <p style="color: #64748b;">I believe small businesses thrive when processes stay transparent. Direct alignment on project expectations, upfront timeline pricing, and dependable turnarounds every single time.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER / FINAL CTA -->
+    <footer>
+        <div class="container">
+            <h2>Ready to upgrade your digital footprint?</h2>
+            <a href="https://www.linkedin.com" target="_blank" class="cta-btn">Let's Connect on LinkedIn</a>
+            <p>&copy; 2026 Emily Watts. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
